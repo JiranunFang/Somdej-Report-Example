@@ -1,0 +1,111 @@
+
+.container {
+  display: flex;
+  align-items: flex-start; /* ให้ชิดบน */
+}
+
+.image {
+  width: 100px; /* ปรับขนาดตามต้องการ */
+  height: auto;
+  display: block;
+}
+
+#ECG1{
+  width:550px;
+  height: auto;
+  display: block;
+}
+
+.ECG{
+  padding-left: 10px;
+}
+
+.text {
+  margin-left: 10px; /* ระยะห่างระหว่างภาพกับข้อความ */
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+}
+
+/* ตาราง */
+
+ .table {
+      display: flex;
+      flex-direction: column;
+      width: 800px ; /* ความกว้างของตารางทั้งหมด */
+      border: 1px solid #ccc;
+      font-family: Arial, sans-serif;
+      font-size:small;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      height: auto; /* ความสูงของแต่ละแถว */
+      border-bottom: 1px solid #ccc;
+    }
+
+    .row:last-child {
+      border-bottom: none;
+    }
+
+    .cell {
+      flex: 1; /* ให้แบ่งเท่ากัน (หรือใช้ความกว้างแบบกำหนดเองก็ได้) */
+      padding: 8px;
+      border-right: 1px solid #ccc;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+    }
+
+    .cell:last-child {
+      border-right: none;
+    }
+
+    /* ตัวอย่างการตั้งความกว้างเฉพาะ */
+    .col-1 {
+      flex: 0 0 20%;
+      display: flex;
+      justify-content: flex-start; /* ชิด */
+      align-items: flex-start;   /* ชิดบน */
+    }
+
+    .col-2 {
+      flex: 0 0 80%;
+      word-wrap: break-word;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+
+
+    
+
+
+
+
+    /*จุดของ ul*/
+
+      ul {
+    list-style: none;         /* ซ่อน bullet ปกติ */
+    padding-left: 20px;       /* เว้นระยะห่างจากซ้าย */
+    margin: 0;
+  }
+
+  li {
+    position: relative;
+    padding-left: 16px;       /* เว้นช่องให้จุดแสดง */
+    margin-bottom: 6px;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 4px;
+    height: 4px;
+    border: 1px solid #000;   /* ขอบดำ */
+    border-radius: 50%;       /* ให้เป็นวงกลม */
+    background-color: transparent; /* ด้านในโปร่งใส */
+  }
